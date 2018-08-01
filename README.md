@@ -20,7 +20,6 @@ The intent of the application is to use **ASP .NET Core Web API's** and **Entity
 - Should be able to **search** the notes by **title**
 
 ## Instructions
-
 - Create a Web API Application which satisfies the above specs
 - Create a Documentation using Swagger for the above specs
 - Write Test Cases which should test for the above specs
