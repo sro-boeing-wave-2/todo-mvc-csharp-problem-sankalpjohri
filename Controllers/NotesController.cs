@@ -5,7 +5,7 @@ using todo_mvc_csharp_problem_sankalpjohri.Services;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
 {
-  [Route("api/notes")]
+  [Route("api/note")]
   [ApiController]
   public class NotesController : Controller
   {
@@ -30,6 +30,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Get note by id
      */
+    [Route("/{id}")]
     [HttpGet]
     public IActionResult GetNoteById(long id)
     {
@@ -50,6 +51,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Delete a/set of note/s.
      */
+    [Route("/{id}")]
     [HttpDelete]
     public IActionResult DeleteNote([FromQuery] List<long> ids)
     {
@@ -60,6 +62,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Edit a note
      */
+    [Route("/{id}")]
     [HttpPut]
     public IActionResult EditNote(long id, [FromBody] Note note)
     {
@@ -70,6 +73,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Get all the pinned notes
      */
+    [Route("/pinned")]
     [HttpGet]
     public IActionResult GetPinnedNotes()
     {
@@ -80,6 +84,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Get notes by labels
      */
+    [Route("/label")]
     [HttpGet]
     public IActionResult GetNotesByLabels([FromQuery] List<string> query)
     {
@@ -90,6 +95,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Search the notes with title.
      */
+    [Route("/search")]
     [HttpGet]
     public IActionResult SearchNotes([FromQuery] string query)
     {

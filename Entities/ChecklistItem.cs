@@ -1,12 +1,14 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Entities
 {
   public class ChecklistItem
   {
-    private long id { get; }
-    private string text { get; set; }
-    private bool isChecked { get; set; }
+    public long id { get; }
+    public string text { get; set; }
+    public bool isChecked { get; set; }
+    public long noteId { get; set; }
 
     public ChecklistItem()
     {
