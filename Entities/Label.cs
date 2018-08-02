@@ -1,16 +1,21 @@
-﻿namespace todo_mvc_csharp_problem_sankalpjohri.Entities
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace todo_mvc_csharp_problem_sankalpjohri.Entities
 {
   public class Label
   {
-    public long id { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int id { get; set; }
     public string text { get; set; }
-    public long noteId { get; set; }
+    public int noteId { get; set; }
 
     public Label()
     {
     }
 
-    public Label(long id, string text, long noteId)
+    public Label(int id, string text, int noteId)
     {
       this.id = id;
       this.text = text;

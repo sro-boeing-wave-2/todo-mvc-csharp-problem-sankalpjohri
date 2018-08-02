@@ -1,9 +1,14 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using todo_mvc_csharp_problem_sankalpjohri.Connectors;
+using todo_mvc_csharp_problem_sankalpjohri.Entities;
+using todo_mvc_csharp_problem_sankalpjohri.Repositories;
 using todo_mvc_csharp_problem_sankalpjohri.Services;
+using MySql.Data.EntityFrameworkCore;
 
 namespace todo_mvc_csharp_problem_sankalpjohri
 {
@@ -20,8 +25,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-      services.AddSingleton<INoteService, NoteService>();
-    }
+      services.AddScoped<INoteService, NoteService>();
+      services.AddScoped<INoteAccess<Note, long>, NoteAccess>();
+      services.AddDbContext<NotesContext>(opts =>
+        opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -35,7 +43,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri
         app.UseHsts();
       }
 
-      app.UseHttpsRedirection();
+      //app.UseHttpsRedirection();
       app.UseMvc();
     }
   }

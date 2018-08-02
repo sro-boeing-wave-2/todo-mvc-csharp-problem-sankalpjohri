@@ -1,14 +1,17 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Entities
 {
   public class ChecklistItem
   {
-    public long id { get; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int id { get; set; }
     public string text { get; set; }
     public bool isChecked { get; set; }
-    public long noteId { get; set; }
+    public int noteId { get; set; }
 
     public ChecklistItem()
     {
@@ -16,10 +19,12 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
       isChecked = false;
     }
 
-    public ChecklistItem(string text, bool isChecked)
+    public ChecklistItem(int id, string text, bool isChecked, int noteId)
     {
-      this.text = text ?? throw new ArgumentNullException(nameof(text));
+      this.id = id;
+      this.text = text;
       this.isChecked = isChecked;
+      this.noteId = noteId;
     }
   }
 }

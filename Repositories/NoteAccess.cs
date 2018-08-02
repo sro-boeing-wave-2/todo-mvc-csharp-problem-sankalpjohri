@@ -9,6 +9,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
   public class NoteAccess: INoteAccess<Note, long>
   {
     private NotesContext _context;
+
+    public NoteAccess(NotesContext _context)
+    {
+      this._context = _context;
+    }
     
     public IEnumerable<Note> GetAllNotes()
     {

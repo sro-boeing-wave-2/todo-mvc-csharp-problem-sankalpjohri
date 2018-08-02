@@ -1,10 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
+using todo_mvc_csharp_problem_sankalpjohri.Repositories;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Services
 {
   public class NoteService: INoteService
   {
+    private INoteAccess<Note, long> _noteAccess;
+
+    public NoteService(INoteAccess<Note, long> _noteAccess)
+    {
+      this._noteAccess = _noteAccess;
+    }
+
     public Note CreateNote(Note note)
     {
       throw new System.NotImplementedException();
@@ -17,7 +26,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
 
     public List<Note> GetAllNotes()
     {
-      throw new System.NotImplementedException();
+      return _noteAccess.GetAllNotes().ToList();
     }
 
     public bool DeleteNotes(List<long> noteIds)
