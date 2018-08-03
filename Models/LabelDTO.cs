@@ -4,14 +4,14 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
 {
   public class LabelDTO
   {
-    public int id { get; set; }
+    public long id { get; set; }
     public string text { get; set; }
 
     public LabelDTO()
     {
     }
 
-    public LabelDTO(int id, string text)
+    public LabelDTO(long id, string text)
     {
       this.id = id;
       this.text = text;
@@ -23,7 +23,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
       text = label.text;
     }
 
-    public Label toEntity(int noteId)
+    public Label toEntity(long noteId)
     {
       return new Label(id, text, noteId);
     }

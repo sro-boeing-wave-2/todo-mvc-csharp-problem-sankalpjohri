@@ -29,6 +29,28 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     }
     
     /**
+     * Get notes by labels
+     */
+    [Route("search/label")]
+    [HttpGet]
+    public IActionResult GetNotesByLabels([FromQuery] List<string> query)
+    {
+      List<NoteDTO> result = _noteService.GetNotesByLabel(query);
+      return Ok(result);
+    }
+    
+    /**
+     * Search the notes with title.
+     */
+    [Route("search/title")]
+    [HttpGet]
+    public IActionResult SearchNotes([FromQuery] string query)
+    {
+      List<NoteDTO> result = _noteService.SearchNotesByTitle(query);
+      return Ok(result);
+    }
+    
+    /**
      * Get note by id
      */
     [Route("{id}")]
@@ -52,9 +74,8 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Delete a/set of note/s.
      */
-    [Route("{id}")]
     [HttpDelete]
-    public IActionResult DeleteNote([FromQuery] List<long> ids)
+    public IActionResult DeleteNote([FromQuery(Name = "ids")] List<long> ids)
     {
       bool result = _noteService.DeleteNotes(ids);
       return Ok(result);
@@ -74,33 +95,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Get all the pinned notes
      */
-    [Route("pinned")]
+    [Route("search/pinned")]
     [HttpGet]
     public IActionResult GetPinnedNotes()
     {
       List<NoteDTO> result = _noteService.GetPinnedNotes();
-      return Ok(result);
-    }
-    
-    /**
-     * Get notes by labels
-     */
-    [Route("label")]
-    [HttpGet]
-    public IActionResult GetNotesByLabels([FromQuery] List<string> query)
-    {
-      List<NoteDTO> result = _noteService.GetNotesByLabel(query);
-      return Ok(result);
-    }
-    
-    /**
-     * Search the notes with title.
-     */
-    [Route("search")]
-    [HttpGet]
-    public IActionResult SearchNotes([FromQuery] string query)
-    {
-      List<NoteDTO> result = _noteService.SearchNotesByTitle(query);
       return Ok(result);
     }
   }

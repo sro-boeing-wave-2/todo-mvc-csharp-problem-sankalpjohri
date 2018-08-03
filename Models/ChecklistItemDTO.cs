@@ -4,7 +4,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
 {
   public class ChecklistItemDTO
   {
-    public int id { get; set; }
+    public long id { get; set; }
     public string text { get; set; }
     public bool isChecked { get; set; }
 
@@ -13,7 +13,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
     {
     }
 
-    public ChecklistItemDTO(int id, string text, bool isChecked)
+    public ChecklistItemDTO(long id, string text, bool isChecked)
     {
       this.id = id;
       this.text = text;
@@ -27,7 +27,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
       isChecked = checklistItem.isChecked;
     }
 
-    public ChecklistItem toEntity(int noteId)
+    public ChecklistItem toEntity(long noteId)
     {
       return new ChecklistItem(id, text, isChecked, noteId);
     }

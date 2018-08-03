@@ -7,15 +7,15 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
   {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int id { get; set; }
+    public long id { get; set; }
     public string text { get; set; }
-    public int noteId { get; set; }
+    public long noteId { get; set; }
 
     public Label()
     {
     }
 
-    public Label(int id, string text, int noteId)
+    public Label(long id, string text, long noteId)
     {
       this.id = id;
       this.text = text;

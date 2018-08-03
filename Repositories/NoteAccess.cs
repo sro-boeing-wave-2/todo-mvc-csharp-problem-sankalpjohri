@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authentication;
 using todo_mvc_csharp_problem_sankalpjohri.Connectors;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 
@@ -70,12 +71,12 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
 
     public List<Note> searchNotesByTitle(string title)
     {
-      throw new NotImplementedException();
+      return _context.Notes.Where(note => note.title.Contains(title)).ToList();
     }
 
-    public List<Note> searchNotesByLabels()
+    public List<Note> GetPinnedNotes()
     {
-      throw new NotImplementedException();
+      return _context.Notes.Where(note => note.isPinned).ToList();
     }
   }
 }

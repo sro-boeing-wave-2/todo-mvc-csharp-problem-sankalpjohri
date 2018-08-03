@@ -27,6 +27,10 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
       services.AddScoped<INoteService, NoteService>();
       services.AddScoped<INoteAccess<Note, long>, NoteAccess>();
+      services.AddScoped<ILabelService, LabelService>();
+      services.AddScoped<ILabelAccess<Label, long>, LabelAccess>();
+      services.AddScoped<ICheckListItemService, CheckListItemService>();
+      services.AddScoped<ICheckListAccess<ChecklistItem, long>, CheckListItemAccess>();
       services.AddDbContext<NotesContext>(opts =>
         opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
      }

@@ -8,10 +8,10 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
   {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int id { get; set; }
+    public long id { get; set; }
     public string text { get; set; }
     public bool isChecked { get; set; }
-    public int noteId { get; set; }
+    public long noteId { get; set; }
 
     public ChecklistItem()
     {
@@ -19,7 +19,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
       isChecked = false;
     }
 
-    public ChecklistItem(int id, string text, bool isChecked, int noteId)
+    public ChecklistItem(long id, string text, bool isChecked, long noteId)
     {
       this.id = id;
       this.text = text;

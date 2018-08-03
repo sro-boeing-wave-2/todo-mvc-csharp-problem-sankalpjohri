@@ -43,6 +43,6 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
     /**
      * Repository method to get pinned notes.
      */
-    List<TEntity> searchNotesByLabels();
+    List<TEntity> GetPinnedNotes();
   }
 }
