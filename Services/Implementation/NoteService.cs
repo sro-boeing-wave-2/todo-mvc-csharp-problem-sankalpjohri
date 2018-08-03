@@ -2,13 +2,12 @@
 using System.Data;
 using System.Data.Entity.Core;
 using System.Linq;
-using Microsoft.AspNetCore.Connections.Features;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Repositories;
+using todo_mvc_csharp_problem_sankalpjohri.Services;
 
-namespace todo_mvc_csharp_problem_sankalpjohri.Services
+namespace todo
 {
   public class NoteService : INoteService
   {
@@ -80,6 +79,16 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
     public List<NoteDTO> GetNotesByLabel(List<string> labels)
     {
       List<NoteDTO> resultLists = new List<NoteDTO>();
+      List<Label> searchResults = _labelService.SearchLabelByText(labels);
+      List<long> noteIds = searchResults.Select(label => label.noteId).Distinct().ToList();
+      List<Note> notes = _noteAccess.GetNoteById(noteIds);
+      if (noteIds != null && noteIds.Count > 0)
+      {
+        foreach (Note note in notes)
+        {
+          resultLists.Add(new NoteDTO(note));
+        }
+      }
       return resultLists;
     }
 

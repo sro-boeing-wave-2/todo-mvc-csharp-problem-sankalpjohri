@@ -2,8 +2,9 @@
 using System.Linq;
 using todo_mvc_csharp_problem_sankalpjohri.Connectors;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
+using todo_mvc_csharp_problem_sankalpjohri.Repositories;
 
-namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
+namespace todo
 {
   public class CheckListItemAccess : ICheckListAccess<ChecklistItem, long>
   {

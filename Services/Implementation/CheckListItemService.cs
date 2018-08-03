@@ -2,8 +2,9 @@
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Repositories;
+using todo_mvc_csharp_problem_sankalpjohri.Services;
 
-namespace todo_mvc_csharp_problem_sankalpjohri.Services
+namespace todo
 {
   public class CheckListItemService: ICheckListItemService
   {

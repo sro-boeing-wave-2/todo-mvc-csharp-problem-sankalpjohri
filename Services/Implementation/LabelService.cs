@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Repositories;
+using todo_mvc_csharp_problem_sankalpjohri.Services;
 
-namespace todo_mvc_csharp_problem_sankalpjohri.Services
+namespace todo
 {
   public class LabelService : ILabelService
   {
@@ -66,6 +66,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
         }
       }
       return resultList;
+    }
+
+    public List<Label> SearchLabelByText(List<string> labels)
+    {
+      return _lableAccess.searchNotesByLabels(labels);
     }
   }
 }

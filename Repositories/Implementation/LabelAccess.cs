@@ -2,8 +2,9 @@
 using System.Linq;
 using todo_mvc_csharp_problem_sankalpjohri.Connectors;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
+using todo_mvc_csharp_problem_sankalpjohri.Repositories;
 
-namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
+namespace todo
 {
   public class LabelAccess : ILabelAccess<Label, long>
   {
@@ -36,6 +37,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
       }
 
       return -1;
+    }
+
+    public List<Label> searchNotesByLabels(List<string> labels)
+    {
+      return _notesContext.labels.Where(label => labels.Contains(label.text)).ToList();
     }
   }
 }

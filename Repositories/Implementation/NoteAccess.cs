@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Authentication;
 using todo_mvc_csharp_problem_sankalpjohri.Connectors;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
+using todo_mvc_csharp_problem_sankalpjohri.Repositories;
 
-namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
+namespace todo
 {
   public class NoteAccess: INoteAccess<Note, long>
   {
@@ -24,6 +24,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
     public Note GetNoteById(long id)
     {
       return _context.Notes.Find(id);
+    }
+    
+    public List<Note> GetNoteById(List<long> ids)
+    {
+      return _context.Notes.Where(note => ids.Contains(note.id)).ToList();
     }
 
     public long AddNote(Note note)

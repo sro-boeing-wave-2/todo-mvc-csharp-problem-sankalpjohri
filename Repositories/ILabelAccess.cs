@@ -19,5 +19,10 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
      * Repository method to delete a label
      */
     int DeleteLabel(long id);
+    
+    /**
+     * Repository method to search notes by labels.
+     */
+    List<TEntity> searchNotesByLabels(List<string> label);
   }
 }
