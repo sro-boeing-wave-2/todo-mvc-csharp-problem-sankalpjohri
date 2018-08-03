@@ -33,7 +33,12 @@ namespace todo
       }
 
       noteEntity = _noteAccess.GetNoteById(noteId);
-      return new NoteDTO(noteEntity);
+      List<LabelDTO> labels = _labelService.AddLabelsForNote(noteId, note.labels);
+      List<ChecklistItemDTO> checklistItems = _checkListItemService.AddCheckListItemsForNote(noteId, note.checklist);
+      NoteDTO result = new NoteDTO(noteEntity);
+      result.labels = labels;
+      result.checklist = checklistItems;
+      return result;
     }
 
     public NoteDTO GetNote(long id)
@@ -43,7 +48,11 @@ namespace todo
       {
         throw new ObjectNotFoundException();
       }
-      return new NoteDTO(note);
+
+      NoteDTO result = new NoteDTO(note);
+      result.checklist = _checkListItemService.FindByNoteId(id);
+      result.labels = _labelService.FindByNoteId(id);
+      return result;
     }
 
     public List<NoteDTO> GetAllNotes()
@@ -54,26 +63,32 @@ namespace todo
       {
         foreach (Note note in noteList)
         {
-          resultList.Add(new NoteDTO(note));
+          resultList.Add(GetNote(note.id));
         }
       }
+
       return resultList;
     }
 
     public bool DeleteNotes(List<long> noteIds)
     {
-      int res = _noteAccess.DeleteNotes(noteIds);
-      if (res <= 0)
+      _noteAccess.DeleteNotes(noteIds);
+      foreach (long noteId in noteIds)
       {
-        return false;
+        NoteDTO noteDto = GetNote(noteId);
+        _labelService.DeleteLabelsForNote(noteId, noteDto.labels);
+        _checkListItemService.DeleteCheckListItemsForNote(noteId, noteDto.checklist);
       }
+
       return true;
     }
 
     public NoteDTO EditNote(long id, NoteDTO note)
     {
-      NoteDTO result = null;
-      return result;
+      _noteAccess.UpdateNote(note.toEntity());
+      _labelService.UpdateLabelsForNote(id, note.labels);
+      _checkListItemService.UpdateCheckListItemsForNote(id, note.checklist);
+      return GetNote(id);
     }
 
     public List<NoteDTO> GetNotesByLabel(List<string> labels)
@@ -86,9 +101,10 @@ namespace todo
       {
         foreach (Note note in notes)
         {
-          resultLists.Add(new NoteDTO(note));
+          resultLists.Add(GetNote(note.id));
         }
       }
+
       return resultLists;
     }
 
@@ -100,9 +116,10 @@ namespace todo
       {
         foreach (Note note in notes)
         {
-          resultLists.Add(new NoteDTO(note));
+          resultLists.Add(GetNote(note.id));
         }
       }
+
       return resultLists;
     }
 
@@ -114,9 +131,10 @@ namespace todo
       {
         foreach (Note note in notes)
         {
-          resultLists.Add(new NoteDTO(note));
+          resultLists.Add(GetNote(note.id));
         }
       }
+
       return resultLists;
     }
   }
