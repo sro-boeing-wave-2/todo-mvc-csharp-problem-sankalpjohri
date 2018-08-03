@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todo-mvc-csharp-problem-sankalpjohri", "todo-mvc-csharp-problem-sankalpjohri.csproj", "{23E0F703-1033-425E-BA9D-DED69668D4E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todo-mvc-csharp-problem-sankalpjohri", "todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.csproj", "{1AA9E721-AB71-441D-8297-217A7EAC9BF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todo-mvc-csharp-problem-sankalpjohri.Tests", "todo-mvc-csharp-problem-sankalpjohri.Tests\todo-mvc-csharp-problem-sankalpjohri.Tests.csproj", "{0D63D25A-232A-4EFB-9A39-47DA34DD8A9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{23E0F703-1033-425E-BA9D-DED69668D4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23E0F703-1033-425E-BA9D-DED69668D4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23E0F703-1033-425E-BA9D-DED69668D4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23E0F703-1033-425E-BA9D-DED69668D4E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA9E721-AB71-441D-8297-217A7EAC9BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA9E721-AB71-441D-8297-217A7EAC9BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA9E721-AB71-441D-8297-217A7EAC9BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA9E721-AB71-441D-8297-217A7EAC9BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D63D25A-232A-4EFB-9A39-47DA34DD8A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D63D25A-232A-4EFB-9A39-47DA34DD8A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D63D25A-232A-4EFB-9A39-47DA34DD8A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D63D25A-232A-4EFB-9A39-47DA34DD8A9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
