@@ -4,9 +4,9 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
 {
   public class ChecklistItemDTO
   {
-    private int id { get; set; }
-    private string text { get; set; }
-    private bool isChecked { get; set; }
+    public int id { get; set; }
+    public string text { get; set; }
+    public bool isChecked { get; set; }
 
 
     public ChecklistItemDTO()

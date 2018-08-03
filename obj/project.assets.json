@@ -12235,6 +12235,7 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "MySql.Data.EntityFrameworkCore >= 8.0.12",
+      "Newtonsoft.Json >= 11.0.2",
       "Pomelo.EntityFrameworkCore.Mysql >= 2.1.0-rc1-final"
     ]
   },
@@ -12290,7 +12291,6 @@
             "autoReferenced": true
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -12298,6 +12298,10 @@
           "MySql.Data.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.12, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[11.0.2, )"
           },
           "Pomelo.EntityFrameworkCore.Mysql": {
             "target": "Package",

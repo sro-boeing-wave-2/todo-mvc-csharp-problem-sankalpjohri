@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
+using todo_mvc_csharp_problem_sankalpjohri.Models;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Services
 {
@@ -8,17 +9,17 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
     /**
      * Create a new note.
      */
-    Note CreateNote(Note note);
+    NoteDTO CreateNote(NoteDTO note);
 
     /**
      * Get note by id/
      */
-    Note GetNote(long id);
+    NoteDTO GetNote(long id);
 
     /**
      * Get all notes
      */
-    List<Note> GetAllNotes();
+    List<NoteDTO> GetAllNotes();
 
     /**
      * Delete notes by ids.
@@ -28,21 +29,21 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
    /**
     * Edit note
     */
-    Note EditNote(long id, Note note);
+    NoteDTO EditNote(long id, NoteDTO note);
 
    /**
     * Search notes by labels.
     */
-    List<Note> GetNotesByLabel(List<string> labels);
+    List<NoteDTO> GetNotesByLabel(List<string> labels);
 
    /**
     * Get all pinned notes
     */
-    List<Note> GetPinnedNotes();
+    List<NoteDTO> GetPinnedNotes();
 
    /**
     * Search notes by title.
     */
-    List<Note> SearchNotesByTitle(string title);
+    List<NoteDTO> SearchNotesByTitle(string title);
   }
 }

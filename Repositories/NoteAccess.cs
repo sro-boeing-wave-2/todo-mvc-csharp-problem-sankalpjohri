@@ -25,10 +25,15 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
       return _context.Notes.Find(id);
     }
 
-    public int AddNote(Note note)
+    public long AddNote(Note note)
     {
       _context.Notes.Add(note);
-      return _context.SaveChanges();
+      int res = _context.SaveChanges();
+      if (res > 0)
+      {
+        return note.id;
+      }
+      return -1;
     }
 
     public int UpdateNote(Note note)

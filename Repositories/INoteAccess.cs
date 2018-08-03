@@ -18,7 +18,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
     /**
      * Repository method to add a note to the db
      */
-    int AddNote(TEntity note);
+    long AddNote(TEntity note);
 
     /**
      * Repository method to update a note.

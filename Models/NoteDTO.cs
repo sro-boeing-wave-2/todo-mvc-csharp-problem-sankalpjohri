@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Models
 {
   public class NoteDTO
   {
-    private int id { get; set; }
-    private string title { get; set; }
-    private string text { get; set; }
-    private List<LabelDTO> labels { get; set; }
-    private List<ChecklistItemDTO> checklist { get; set; }
+    public long id { get; set; }
+    public string title { get; set; }
+    public string text { get; set; }
+    public bool isPinned { get; set; }
+    public List<LabelDTO> labels { get; set; }
+    public List<ChecklistItemDTO> checklist { get; set; }
 
     public NoteDTO()
     {
@@ -17,11 +20,13 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
       checklist = new List<ChecklistItemDTO>();
     }
 
-    public NoteDTO(int id, string title, string text, List<LabelDTO> labels, List<ChecklistItemDTO> checklist)
+    public NoteDTO(long id, string title, string text, bool isPinned, List<LabelDTO> labels,
+      List<ChecklistItemDTO> checklist)
     {
       this.id = id;
       this.title = title;
       this.text = text;
+      this.isPinned = isPinned;
       this.labels = labels;
       this.checklist = checklist;
     }
@@ -38,7 +43,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
       Note note = new Note();
       note.text = text;
       note.title = title;
-      note.id = id;
+      note.isPinned = isPinned;
       return note;
     }
   }

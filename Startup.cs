@@ -42,8 +42,6 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       {
         app.UseHsts();
       }
-
-      //app.UseHttpsRedirection();
       app.UseMvc();
     }
   }

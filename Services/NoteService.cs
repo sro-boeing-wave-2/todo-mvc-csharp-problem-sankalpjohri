@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity.Core;
 using System.Linq;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
+using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Repositories;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Services
@@ -14,19 +17,32 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
       this._noteAccess = _noteAccess;
     }
 
-    public Note CreateNote(Note note)
+    public NoteDTO CreateNote(NoteDTO note)
     {
-      throw new System.NotImplementedException();
+      Note noteEntity = note.toEntity();
+      long noteId = _noteAccess.AddNote(noteEntity);
+      if (noteId <= 0)
+      {
+        throw new DataException();
+      }
+      noteEntity = _noteAccess.GetNoteById(noteId);
+      return new NoteDTO(noteEntity);
+    }
+    
+    public NoteDTO GetNote(long id)
+    {
+      Note note = _noteAccess.GetNoteById(id);
+      if (note == null)
+      {
+        throw new ObjectNotFoundException();
+      }
+      return new NoteDTO(note);
     }
 
-    public Note GetNote(long id)
+    public List<NoteDTO> GetAllNotes()
     {
       throw new System.NotImplementedException();
-    }
-
-    public List<Note> GetAllNotes()
-    {
-      return _noteAccess.GetAllNotes().ToList();
+      //return _noteAccess.GetAllNotes().ToList();
     }
 
     public bool DeleteNotes(List<long> noteIds)
@@ -34,22 +50,22 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
       throw new System.NotImplementedException();
     }
 
-    public Note EditNote(long id, Note note)
+    public NoteDTO EditNote(long id, NoteDTO note)
     {
       throw new System.NotImplementedException();
     }
 
-    public List<Note> GetNotesByLabel(List<string> labels)
+    public List<NoteDTO> GetNotesByLabel(List<string> labels)
     {
       throw new System.NotImplementedException();
     }
 
-    public List<Note> GetPinnedNotes()
+    public List<NoteDTO> GetPinnedNotes()
     {
       throw new System.NotImplementedException();
     }
 
-    public List<Note> SearchNotesByTitle(string title)
+    public List<NoteDTO> SearchNotesByTitle(string title)
     {
       throw new System.NotImplementedException();
     }

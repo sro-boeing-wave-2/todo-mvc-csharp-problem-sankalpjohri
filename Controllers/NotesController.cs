@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
+using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Services;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
@@ -23,18 +24,18 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     [HttpGet]
     public IActionResult GetAllNotes()
     {
-      List<Note> result = _noteService.GetAllNotes();
+      List<NoteDTO> result = _noteService.GetAllNotes();
       return Ok(result);
     }
     
     /**
      * Get note by id
      */
-    [Route("/{id}")]
+    [Route("{id}")]
     [HttpGet]
     public IActionResult GetNoteById(long id)
     {
-      Note result = _noteService.GetNote(id);
+      NoteDTO result = _noteService.GetNote(id);
       return Ok(result);
     }
     
@@ -42,16 +43,16 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
      * Create a new note
      */
     [HttpPost]
-    public IActionResult CreateNote([FromBody] Note note)
+    public IActionResult CreateNote([FromBody] NoteDTO note)
     {
-      Note result = _noteService.CreateNote(note);
+      NoteDTO result = _noteService.CreateNote(note);
       return Ok(result);
     }
     
     /**
      * Delete a/set of note/s.
      */
-    [Route("/{id}")]
+    [Route("{id}")]
     [HttpDelete]
     public IActionResult DeleteNote([FromQuery] List<long> ids)
     {
@@ -62,44 +63,44 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
     /**
      * Edit a note
      */
-    [Route("/{id}")]
+    [Route("{id}")]
     [HttpPut]
-    public IActionResult EditNote(long id, [FromBody] Note note)
+    public IActionResult EditNote(long id, [FromBody] NoteDTO note)
     {
-      Note result = _noteService.EditNote(id, note);
+      NoteDTO result = _noteService.EditNote(id, note);
       return Ok(result);
     }
     
     /**
      * Get all the pinned notes
      */
-    [Route("/pinned")]
+    [Route("pinned")]
     [HttpGet]
     public IActionResult GetPinnedNotes()
     {
-      List<Note> result = _noteService.GetPinnedNotes();
+      List<NoteDTO> result = _noteService.GetPinnedNotes();
       return Ok(result);
     }
     
     /**
      * Get notes by labels
      */
-    [Route("/label")]
+    [Route("label")]
     [HttpGet]
     public IActionResult GetNotesByLabels([FromQuery] List<string> query)
     {
-      List<Note> result = _noteService.GetNotesByLabel(query);
+      List<NoteDTO> result = _noteService.GetNotesByLabel(query);
       return Ok(result);
     }
     
     /**
      * Search the notes with title.
      */
-    [Route("/search")]
+    [Route("search")]
     [HttpGet]
     public IActionResult SearchNotes([FromQuery] string query)
     {
-      List<Note> result = _noteService.SearchNotesByTitle(query);
+      List<NoteDTO> result = _noteService.SearchNotesByTitle(query);
       return Ok(result);
     }
   }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
 {
-  [Route("api/notes")]
+  [Route("api/values")]
   [ApiController]
   public class ValuesController : ControllerBase
   {

@@ -11,7 +11,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
   {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int id { get; set; }
+    public long id { get; set; }
     [Required]
     public string title { get; set; }
     public string text { get; set; }
@@ -24,8 +24,9 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
       isPinned = false;
     }
 
-    public Note(string title, string text, bool isPinned)
+    public Note(long id, string title, string text, bool isPinned)
     {
+      this.id = id;
       this.title = title ?? throw new ArgumentNullException(nameof(title));
       this.text = text ?? throw new ArgumentNullException(nameof(text));
       this.isPinned = isPinned;
