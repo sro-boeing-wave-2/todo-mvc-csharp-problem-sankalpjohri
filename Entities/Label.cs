@@ -29,7 +29,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
         return false;
       }
 
-      if (((Label) obj).id != id)
+      if (((Label) obj).id == null || ((Label) obj).id != id)
       {
         return false;
       }

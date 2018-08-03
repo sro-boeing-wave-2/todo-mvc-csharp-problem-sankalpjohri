@@ -48,9 +48,9 @@ namespace todo
     public List<LabelDTO> UpdateLabelsForNote(long noteId, List<LabelDTO> labels)
     {
       List<Label> labelsFromDb = _lableAccess.GetByNoteId(noteId);
-      List<LabelDTO> tobeAdded = labels.Where(label => label.id == null).ToList();
+      List<LabelDTO> tobeAdded = labels.Where(label => label.id == 0).Select(label => label).ToList();
       AddLabelsForNote(noteId, tobeAdded);
-      List<LabelDTO> toBeDeleted = labelsFromDb.Where(label => labels.Contains(new LabelDTO(label)))
+      List<LabelDTO> toBeDeleted = labelsFromDb.Where(label => !labels.Contains(new LabelDTO(label)))
         .Select(label => new LabelDTO(label)).ToList();
       DeleteLabelsForNote(noteId, toBeDeleted);
       return _lableAccess.GetByNoteId(noteId).Select(label => new LabelDTO(label)).ToList();

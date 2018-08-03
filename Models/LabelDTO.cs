@@ -35,7 +35,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
         return false;
       }
 
-      if (((Label) obj).id != id)
+      if (((LabelDTO) obj).id == null || ((LabelDTO) obj).id != id)
       {
         return false;
       }

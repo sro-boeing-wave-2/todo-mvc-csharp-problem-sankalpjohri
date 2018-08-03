@@ -34,7 +34,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
         return false;
       }
 
-      if (((ChecklistItem) obj).id != id)
+      if (((ChecklistItem) obj).id == null || ((ChecklistItem) obj).id != id)
       {
         return false;
       }

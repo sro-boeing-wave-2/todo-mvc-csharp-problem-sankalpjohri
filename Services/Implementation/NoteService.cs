@@ -134,7 +134,6 @@ namespace todo
           resultLists.Add(GetNote(note.id));
         }
       }
-
       return resultLists;
     }
   }

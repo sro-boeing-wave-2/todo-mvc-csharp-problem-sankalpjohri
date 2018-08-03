@@ -39,7 +39,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
         return false;
       }
 
-      if (((Label) obj).id != id)
+      if (((ChecklistItemDTO) obj).id == null || ((ChecklistItemDTO) obj).id != id)
       {
         return false;
       }

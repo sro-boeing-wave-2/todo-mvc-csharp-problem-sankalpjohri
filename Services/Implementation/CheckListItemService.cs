@@ -57,12 +57,13 @@ namespace todo
     public List<ChecklistItemDTO> UpdateCheckListItemsForNote(long noteId, List<ChecklistItemDTO> checkListItems)
     {
       List<ChecklistItem> itemsFromDb = _checkListItemAccess.GetByNoteId(noteId);
-      List<ChecklistItemDTO> toBeAdded = checkListItems.Where(checkListItem => checkListItem.id == null)
+      List<ChecklistItemDTO> toBeAdded = checkListItems.Where(checkListItem => checkListItem.id == 0)
+        .Select(item => item)
         .ToList();
       AddCheckListItemsForNote(noteId, toBeAdded);
       List<ChecklistItemDTO> toBeDeleted = itemsFromDb
-        .Where(item => checkListItems.Contains(new ChecklistItemDTO(item))).Select(item => new ChecklistItemDTO(item))
-        .ToList();
+        .Where(item => !checkListItems.Contains(new ChecklistItemDTO(item))).Select(item => new ChecklistItemDTO(item))
+         .ToList();
       DeleteCheckListItemsForNote(noteId, toBeDeleted);
       List<ChecklistItem> toBeUpdated =
         checkListItems.Where(item => itemsFromDb.Contains(item.toEntity(noteId))).Select(item => item.toEntity(noteId))
@@ -74,8 +75,8 @@ namespace todo
           _checkListItemAccess.UpdateCheckListItem(noteId, UpdateEntry);
         }
       }
-      return FindByNoteId(noteId
-      );
+
+      return FindByNoteId(noteId);
     }
   }
 }
