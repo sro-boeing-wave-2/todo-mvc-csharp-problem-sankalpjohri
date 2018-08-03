@@ -26,5 +26,20 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
       this.isChecked = isChecked;
       this.noteId = noteId;
     }
+
+    public override bool Equals(object obj)
+    {
+      if (obj == null || obj.GetType() != GetType())
+      {
+        return false;
+      }
+
+      if (((ChecklistItem) obj).id != id)
+      {
+        return false;
+      }
+      
+      return true;
+    }
   }
 }

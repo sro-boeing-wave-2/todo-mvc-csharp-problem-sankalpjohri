@@ -35,7 +35,20 @@ namespace todo
         _notesContext.ChecklistItems.Remove(checklistItem);
         return _notesContext.SaveChanges();
       }
+
       return -1;
+    }
+
+    public int DeleteChecklistItem(List<long> ids)
+    {
+      List<ChecklistItem> checklistItems =
+        _notesContext.ChecklistItems.Where(checklistItem => ids.Contains(checklistItem.id)).ToList();
+      if (checklistItems != null && checklistItems.Count > 0)
+      {
+        _notesContext.ChecklistItems.RemoveRange(checklistItems);
+      }
+
+      return 0;
     }
 
     public int UpdateCheckListItem(long id, ChecklistItem checklistItem)
@@ -47,6 +60,7 @@ namespace todo
         checkListItemFromDb.isChecked = checklistItem.isChecked;
         return _notesContext.SaveChanges();
       }
+
       return -1;
     }
   }

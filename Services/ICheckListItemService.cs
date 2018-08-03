@@ -15,9 +15,15 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
      */
     List<ChecklistItemDTO> AddCheckListItemsForNote(long noteId, 
       List<ChecklistItemDTO> checkListItems);
+    
+    /**
+     * Service method to delete checklist items for a note.
+     */
+    bool DeleteCheckListItemsForNote(long noteId, 
+      List<ChecklistItemDTO> checkListItems);
 
     /**
-     * Service method to update labels for a note.
+     * Service method to update checklist items for a note.
      */
     List<ChecklistItemDTO> UpdateCheckListItemsForNote(long noteId, 
       List<ChecklistItemDTO> checkListItems);

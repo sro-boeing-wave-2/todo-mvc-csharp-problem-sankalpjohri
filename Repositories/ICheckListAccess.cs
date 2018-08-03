@@ -21,6 +21,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
     int DeleteChecklistItem(long id);
 
     /**
+      * Repository method to delete a label
+      */
+    int DeleteChecklistItem(List<long> id);
+
+    /**
      * Repository method to update a checklist item.
      */
     int UpdateCheckListItem(long id, ChecklistItem checklistItem);

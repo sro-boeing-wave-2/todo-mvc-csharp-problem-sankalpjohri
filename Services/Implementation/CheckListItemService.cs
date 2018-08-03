@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore.Update.Internal;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Repositories;
@@ -6,7 +8,7 @@ using todo_mvc_csharp_problem_sankalpjohri.Services;
 
 namespace todo
 {
-  public class CheckListItemService: ICheckListItemService
+  public class CheckListItemService : ICheckListItemService
   {
     private ICheckListAccess<ChecklistItem, long> _checkListItemAccess;
 
@@ -40,12 +42,40 @@ namespace todo
           checklistItemDto.id = checklistItem.id;
         }
       }
+
       return checkListItems;
+    }
+
+    public bool DeleteCheckListItemsForNote(long noteId, List<ChecklistItemDTO> checkListItems)
+    {
+      List<long> checkListItemIds =
+        checkListItems.Select(ChecklistEntity => ChecklistEntity.id).ToList();
+      _checkListItemAccess.DeleteChecklistItem(checkListItemIds);
+      return true;
     }
 
     public List<ChecklistItemDTO> UpdateCheckListItemsForNote(long noteId, List<ChecklistItemDTO> checkListItems)
     {
-      throw new System.NotImplementedException();
+      List<ChecklistItem> itemsFromDb = _checkListItemAccess.GetByNoteId(noteId);
+      List<ChecklistItemDTO> toBeAdded = checkListItems.Where(checkListItem => checkListItem.id == null)
+        .ToList();
+      AddCheckListItemsForNote(noteId, toBeAdded);
+      List<ChecklistItemDTO> toBeDeleted = itemsFromDb
+        .Where(item => checkListItems.Contains(new ChecklistItemDTO(item))).Select(item => new ChecklistItemDTO(item))
+        .ToList();
+      DeleteCheckListItemsForNote(noteId, toBeDeleted);
+      List<ChecklistItem> toBeUpdated =
+        checkListItems.Where(item => itemsFromDb.Contains(item.toEntity(noteId))).Select(item => item.toEntity(noteId))
+          .ToList();
+      if (toBeUpdated != null && toBeUpdated.Count > 0)
+      {
+        foreach (ChecklistItem UpdateEntry in toBeUpdated)
+        {
+          _checkListItemAccess.UpdateCheckListItem(noteId, UpdateEntry);
+        }
+      }
+      return FindByNoteId(noteId
+      );
     }
   }
 }
