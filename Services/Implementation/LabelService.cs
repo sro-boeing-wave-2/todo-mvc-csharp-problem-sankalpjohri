@@ -41,36 +41,33 @@ namespace todo
           labelDto.id = label.id;
         }
       }
+
       return labels;
     }
 
     public List<LabelDTO> UpdateLabelsForNote(long noteId, List<LabelDTO> labels)
     {
       List<Label> labelsFromDb = _lableAccess.GetByNoteId(noteId);
-      List<LabelDTO> resultList = new List<LabelDTO>();
-      if (labels != null && labels.Count > 0)
-      {
-        foreach (LabelDTO labelDto in labels)
-        {
-          Label label;
-          label = labelsFromDb.FirstOrDefault(l => l.id == labelDto.id && l.noteId == noteId);
-          if (label == null && labelDto.id == null)
-          {
-            label = _lableAccess.AddLabel(labelDto.toEntity(noteId));
-            resultList.Add(new LabelDTO(label));
-          }
-          else if (label == null)
-          {
-            _lableAccess.DeleteLabel(labelDto.id);
-          }
-        }
-      }
-      return resultList;
+      List<LabelDTO> tobeAdded = labels.Where(label => label.id == null).ToList();
+      AddLabelsForNote(noteId, tobeAdded);
+      List<LabelDTO> toBeDeleted = labelsFromDb.Where(label => labels.Contains(new LabelDTO(label)))
+        .Select(label => new LabelDTO(label)).ToList();
+      DeleteLabelsForNote(noteId, toBeDeleted);
+      return _lableAccess.GetByNoteId(noteId).Select(label => new LabelDTO(label)).ToList();
     }
 
     public List<Label> SearchLabelByText(List<string> labels)
     {
       return _lableAccess.searchNotesByLabels(labels);
+    }
+
+    public void DeleteLabelsForNote(long noteId, List<LabelDTO> labels)
+    {
+      if (labels != null && labels.Count > 0)
+      {
+        List<long> labelIds = labels.Select(label => label.id).ToList();
+        _lableAccess.DeleteLabel(labelIds);
+      }
     }
   }
 }

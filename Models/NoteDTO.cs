@@ -46,5 +46,19 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
       note.isPinned = isPinned;
       return note;
     }
+
+    public override bool Equals(object obj)
+    {
+      if (obj == null || obj.GetType() != GetType())
+      {
+        return false;
+      }
+
+      if (((Label) obj).id != id)
+      {
+        return false;
+      }
+      return true;
+    }
   }
 }

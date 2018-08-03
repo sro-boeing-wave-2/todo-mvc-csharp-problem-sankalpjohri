@@ -27,12 +27,12 @@ namespace todo
       return label;
     }
 
-    public int DeleteLabel(long id)
+    public int DeleteLabel(List<long> ids)
     {
-      Label label = _notesContext.labels.Find(id);
-      if (label != null)
+      List<Label> labels = _notesContext.labels.Where(label => ids.Contains(label.id)).ToList();
+      if (labels != null)
       {
-        _notesContext.labels.Remove(label);
+        _notesContext.labels.RemoveRange(labels);
         return _notesContext.SaveChanges();
       }
 

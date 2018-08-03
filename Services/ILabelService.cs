@@ -15,7 +15,12 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Services
      * Service method to add labels for a note.
      */
     List<LabelDTO> AddLabelsForNote(long noteId, List<LabelDTO> labels);
-    
+
+    /**
+      * Service method to add labels for a note.
+      */
+    void DeleteLabelsForNote(long noteId, List<LabelDTO> labels);
+
     /**
      * Service method to update labels for a note.
      */

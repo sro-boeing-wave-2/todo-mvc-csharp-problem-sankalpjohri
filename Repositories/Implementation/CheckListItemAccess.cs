@@ -46,9 +46,10 @@ namespace todo
       if (checklistItems != null && checklistItems.Count > 0)
       {
         _notesContext.ChecklistItems.RemoveRange(checklistItems);
+        return _notesContext.SaveChanges();
       }
 
-      return 0;
+      return -1;
     }
 
     public int UpdateCheckListItem(long id, ChecklistItem checklistItem)
