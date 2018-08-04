@@ -4,12 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Swashbuckle.AspNetCore.SwaggerUI;
+using todo;
 using todo_mvc_csharp_problem_sankalpjohri.Connectors;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Repositories;
 using todo_mvc_csharp_problem_sankalpjohri.Services;
-using MySql.Data.EntityFrameworkCore;
-using todo;
 
 namespace todo_mvc_csharp_problem_sankalpjohri
 {
@@ -34,7 +36,12 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       services.AddScoped<ICheckListAccess<ChecklistItem, long>, CheckListItemAccess>();
       services.AddDbContext<NotesContext>(opts =>
         opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
-     }
+
+      services.AddSwaggerGen(c =>
+      {
+        c.SwaggerDoc("v1", new Info { Title = "Todo API\'s", Version = "v1" });
+      });
+    }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -47,6 +54,14 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       {
         app.UseHsts();
       }
+
+      app.UseSwagger();
+      
+      app.UseSwaggerUI(c =>
+      {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API\'s v1");
+      });
+      
       app.UseMvc();
     }
   }

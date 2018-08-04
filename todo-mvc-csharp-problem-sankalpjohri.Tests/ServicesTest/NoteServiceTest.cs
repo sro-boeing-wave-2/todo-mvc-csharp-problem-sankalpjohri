@@ -12,7 +12,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     private NoteDTO actual, expected;
     private Note note;
     private long noteId;
-    private List<ChecklistItemDTO> lhecklistItemDtos;
+    private List<ChecklistItemDTO> checklistItemDtos;
     private List<LabelDTO> labelDtos;
     
     /**
@@ -20,11 +20,27 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
      */
     public void Setup()
     {
+      
       note = SetupNote();
-
+      actual = SetupNoteDTO();
+      expected = SetupNoteDTO();
     }
 
-    public Note SetupNote()
+     
+    
+    private NoteDTO SetupNoteDTO()
+    {
+      NoteDTO noteDto = new NoteDTO();
+      noteDto.id = 0;
+      noteDto.text = "Test Text";
+      noteDto.title = "Test Title";
+      noteDto.isPinned = true;
+      noteDto.labels = new List<LabelDTO>();
+      noteDto.checklist = new List<ChecklistItemDTO>();
+      return noteDto;
+    }
+
+    private Note SetupNote()
     {
       Note note = new Note();
       note.id = 1;
@@ -37,9 +53,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     [Fact]
     public void Test_CreateNote_Success()
     {
+      var noteService = new Mock<NoteService>();
       var noteAccess = new Mock<NoteAccess>();
       noteAccess.Setup(_ => _.AddNote(It.IsAny<Note>())).Returns(1L);
-      noteAccess.Setup(_ => _.GetNoteById(It.IsAny<long>())).Returns(note);
+      noteAccess.Setup(_ => _.GetNoteById(It.IsAny<long>())).Returns(actual.toEntity());
+      //actual = noteService.
     }
     
     [Fact]
