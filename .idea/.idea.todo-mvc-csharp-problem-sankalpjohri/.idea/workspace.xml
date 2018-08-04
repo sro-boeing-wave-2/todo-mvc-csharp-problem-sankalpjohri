@@ -4,35 +4,10 @@
     <list default="true" id="67cadc23-1f2f-461c-9c46-cc3625bcc346" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-mvc-csharp-problem-sankalpjohri/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-mvc-csharp-problem-sankalpjohri/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/obj/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/todo-mvc-csharp-problem-sankalpjohri.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.dll" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.dll" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/todo-mvc-csharp-problem-sankalpjohri.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/todo-mvc-csharp-problem-sankalpjohri.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/todo-mvc-csharp-problem-sankalpjohri.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/todo-mvc-csharp-problem-sankalpjohri.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/todo-mvc-csharp-problem-sankalpjohri.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/obj/todo-mvc-csharp-problem-sankalpjohri.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/todo-mvc-csharp-problem-sankalpjohri.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/todo-mvc-csharp-problem-sankalpjohri.csproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,45 +59,45 @@
       <file leaf-file-name="NoteServiceTest.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+            <state relative-caret-position="17">
+              <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
               <folding>
-                <marker date="1533407861649" expanded="true" signature="6:173" ph="..." />
-                <marker date="1533407861649" expanded="true" signature="240:2108" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="273:2106" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="465:517" ph="/* Setting up the data for the tests ... */" />
-                <marker date="1533407861649" expanded="true" signature="541:650" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="697:994" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="1024:1191" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="1249:1546" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="1601:1620" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="1679:1698" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="1756:1775" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="1831:1850" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="1914:1933" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="1996:2015" ph="{...}" />
-                <marker date="1533407861649" expanded="true" signature="2078:2097" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="6:283" ph="..." />
+                <marker date="1533411916969" expanded="true" signature="350:7161" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="383:7159" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="611:663" ph="/* Setting up the data for the tests ... */" />
+                <marker date="1533411916969" expanded="true" signature="687:789" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="825:1123" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="1153:1321" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="1375:2188" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="2239:2893" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="2948:3765" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="3819:4541" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="4593:5338" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="5397:6220" ph="{...}" />
+                <marker date="1533411916969" expanded="true" signature="6279:7155" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Startup.cs">
+      <file leaf-file-name="INoteService.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/INoteService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="197">
+              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
               <folding>
-                <marker date="1533307906452" expanded="true" signature="6:579" ph="..." />
-                <marker date="1533307906452" expanded="true" signature="627:2249" ph="{...}" />
-                <marker date="1533307906452" expanded="true" signature="652:2247" ph="{...}" />
-                <marker date="1533307906452" expanded="true" signature="705:754" ph="{...}" />
-                <marker date="1533307906452" expanded="true" signature="965:1735" ph="{...}" />
-                <marker date="1533307906452" expanded="true" signature="1631:1727" ph="{...}" />
-                <marker date="1533307906452" expanded="true" signature="1915:2243" ph="{...}" />
-                <marker date="1533307906452" expanded="true" signature="1952:2009" ph="{...}" />
-                <marker date="1533307906452" expanded="true" signature="2020:2059" ph="{...}" />
-                <marker date="1533307906452" expanded="true" signature="2119:2208" ph="{...}" />
+                <marker date="1533205114453" expanded="false" signature="6:137" ph="..." />
+                <marker date="1533205114453" expanded="true" signature="194:897" ph="{...}" />
+                <marker date="1533205114453" expanded="true" signature="228:895" ph="{...}" />
+                <marker date="1533205114453" expanded="true" signature="237:274" ph="/* Create a new note. ... */" />
+                <marker date="1533205114453" expanded="true" signature="318:352" ph="/* Get note by id ... */" />
+                <marker date="1533205114453" expanded="true" signature="388:420" ph="/* Get all notes ... */" />
+                <marker date="1533205114453" expanded="true" signature="459:498" ph="/* Delete notes by ids. ... */" />
+                <marker date="1533205114453" expanded="true" signature="545:571" ph="/* Edit note ... */" />
+                <marker date="1533205114453" expanded="true" signature="621:661" ph="/* Search notes by labels. ... */" />
+                <marker date="1533205114453" expanded="true" signature="722:759" ph="/* Get all pinned notes ... */" />
+                <marker date="1533205114453" expanded="true" signature="800:839" ph="/* Search notes by title. ... */" />
               </folding>
             </state>
           </provider>
@@ -131,7 +106,8 @@
       <file leaf-file-name="NoteService.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/Implementation/NoteService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-258">
+            <state relative-caret-position="197">
+              <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
               <folding>
                 <marker date="1533292436747" expanded="false" signature="6:316" ph="..." />
                 <marker date="1533292436747" expanded="true" signature="332:4098" ph="{...}" />
@@ -161,6 +137,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+              <folding>
+                <marker date="1533307906452" expanded="true" signature="6:579" ph="..." />
+                <marker date="1533307906452" expanded="true" signature="627:2249" ph="{...}" />
+                <marker date="1533307906452" expanded="true" signature="652:2247" ph="{...}" />
+                <marker date="1533307906452" expanded="true" signature="705:754" ph="{...}" />
+                <marker date="1533307906452" expanded="true" signature="965:1735" ph="{...}" />
+                <marker date="1533307906452" expanded="true" signature="1631:1727" ph="{...}" />
+                <marker date="1533307906452" expanded="true" signature="1915:2243" ph="{...}" />
+                <marker date="1533307906452" expanded="true" signature="1952:2009" ph="{...}" />
+                <marker date="1533307906452" expanded="true" signature="2020:2059" ph="{...}" />
+                <marker date="1533307906452" expanded="true" signature="2119:2208" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -179,6 +176,7 @@
     <setting file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5322196E-EC4D-4A49-A05F-63EFDE8F0BE4/5a/5984a222/Thread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/INoteService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1A963D6B-DB8D-435E-8DCD-C28935E050AD/73/64807e71/DbSet`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Repositories/Implementation/NoteAccess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -231,6 +229,7 @@
         <option value="$PROJECT_DIR$/Controllers/Controller1.cs" />
         <option value="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Startup.cs" />
+        <option value="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/Implementation/NoteService.cs" />
         <option value="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs" />
       </list>
     </option>
@@ -330,7 +329,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/todo-mvc-csharp-problem-sankalpjohri.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -350,6 +349,9 @@
       <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
       <browser start="true" url="http://localhost:5000" />
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.Default" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -365,12 +367,12 @@
       <workItem from="1533065213780" duration="1416000" />
       <workItem from="1533067730225" duration="14607000" />
       <workItem from="1533201526253" duration="35716000" />
-      <workItem from="1533300181072" duration="7883000" />
+      <workItem from="1533300181072" duration="11025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70970000" />
+    <option name="totallyTimeSpent" value="74112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,18 +390,19 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291592" />
       <window_info anchor="right" id="Errors In Solution" order="3" weight="0.32955465" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3291592" />
-      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info active="true" anchor="bottom" id="Unit Tests" order="7" visible="true" weight="0.3291592" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291592" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3291592" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3291592" />
-      <window_info active="true" anchor="bottom" id="NuGet" order="7" visible="true" weight="0.32200357" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32200357" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49702382" visible="true" weight="0.26639676" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.3291592" />
       <window_info anchor="right" id="Database" order="4" side_tool="true" weight="0.32955465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5029762" side_tool="true" weight="0.26153848" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.22719142" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26833633" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -407,7 +410,6 @@
       <window_info anchor="bottom" id="REST Client" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.3291592" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
@@ -542,8 +544,60 @@
           <properties documentPath="$PROJECT_DIR$/Services/Implementation/CheckListItemService.cs" initialLine="70" />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs</url>
+          <line>57</line>
+          <properties documentPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs" initialLine="56">
+            <startOffsets>
+              <startOffset value="1403" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1455" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs</url>
+          <line>67</line>
+          <properties documentPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs" initialLine="67">
+            <startOffsets>
+              <startOffset value="2151" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="2182" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/Implementation/NoteService.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/Implementation/NoteService.cs" initialLine="27">
+            <startOffsets>
+              <startOffset value="876" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="910" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs</url>
+          <line>100</line>
+          <properties documentPath="$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs" initialLine="99">
+            <startOffsets>
+              <startOffset value="3655" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="3693" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="26" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -566,7 +620,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Controllers/NotesController.cs" />
     <entry file="file://$PROJECT_DIR$/Connectors/NotesContext.cs" />
     <entry file="file://$PROJECT_DIR$/Controllers/ValuesController.cs" />
     <entry file="file://$PROJECT_DIR$/Entities/Note.cs" />
@@ -655,37 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/Implementation/NoteService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-258">
-          <folding>
-            <marker date="1533292436747" expanded="false" signature="6:316" ph="..." />
-            <marker date="1533292436747" expanded="true" signature="332:4098" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="376:4096" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="668:818" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="863:1437" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="986:1037" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="1474:1801" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="1551:1612" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="1841:2167" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="2015:2135" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="2063:2127" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="2216:2539" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="2301:2513" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="2591:2811" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="2874:3360" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="3209:3327" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="3254:3319" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="3403:3714" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="3563:3681" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="3608:3673" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="3773:4092" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="3942:4060" ph="{...}" />
-            <marker date="1533292436747" expanded="true" signature="3987:4052" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Repositories/Implementation/NoteAccess.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -743,26 +765,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/INoteService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+          <folding>
+            <marker date="1533205114453" expanded="false" signature="6:137" ph="..." />
+            <marker date="1533205114453" expanded="true" signature="194:897" ph="{...}" />
+            <marker date="1533205114453" expanded="true" signature="228:895" ph="{...}" />
+            <marker date="1533205114453" expanded="true" signature="237:274" ph="/* Create a new note. ... */" />
+            <marker date="1533205114453" expanded="true" signature="318:352" ph="/* Get note by id ... */" />
+            <marker date="1533205114453" expanded="true" signature="388:420" ph="/* Get all notes ... */" />
+            <marker date="1533205114453" expanded="true" signature="459:498" ph="/* Delete notes by ids. ... */" />
+            <marker date="1533205114453" expanded="true" signature="545:571" ph="/* Edit note ... */" />
+            <marker date="1533205114453" expanded="true" signature="621:661" ph="/* Search notes by labels. ... */" />
+            <marker date="1533205114453" expanded="true" signature="722:759" ph="/* Get all pinned notes ... */" />
+            <marker date="1533205114453" expanded="true" signature="800:839" ph="/* Search notes by title. ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri/Services/Implementation/NoteService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+          <folding>
+            <marker date="1533292436747" expanded="false" signature="6:316" ph="..." />
+            <marker date="1533292436747" expanded="true" signature="332:4098" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="376:4096" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="668:818" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="863:1437" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="986:1037" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="1474:1801" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="1551:1612" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="1841:2167" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="2015:2135" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="2063:2127" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="2216:2539" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="2301:2513" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="2591:2811" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="2874:3360" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="3209:3327" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="3254:3319" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="3403:3714" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="3563:3681" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="3608:3673" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="3773:4092" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="3942:4060" ph="{...}" />
+            <marker date="1533292436747" expanded="true" signature="3987:4052" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/todo-mvc-csharp-problem-sankalpjohri.Tests/ServicesTest/NoteServiceTest.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        <state relative-caret-position="17">
+          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
           <folding>
-            <marker date="1533407861649" expanded="true" signature="6:173" ph="..." />
-            <marker date="1533407861649" expanded="true" signature="240:2108" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="273:2106" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="465:517" ph="/* Setting up the data for the tests ... */" />
-            <marker date="1533407861649" expanded="true" signature="541:650" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="697:994" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="1024:1191" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="1249:1546" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="1601:1620" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="1679:1698" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="1756:1775" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="1831:1850" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="1914:1933" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="1996:2015" ph="{...}" />
-            <marker date="1533407861649" expanded="true" signature="2078:2097" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="6:283" ph="..." />
+            <marker date="1533411916969" expanded="true" signature="350:7161" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="383:7159" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="611:663" ph="/* Setting up the data for the tests ... */" />
+            <marker date="1533411916969" expanded="true" signature="687:789" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="825:1123" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="1153:1321" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="1375:2188" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="2239:2893" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="2948:3765" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="3819:4541" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="4593:5338" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="5397:6220" ph="{...}" />
+            <marker date="1533411916969" expanded="true" signature="6279:7155" ph="{...}" />
           </folding>
         </state>
       </provider>
