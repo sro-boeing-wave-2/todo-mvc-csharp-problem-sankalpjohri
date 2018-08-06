@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Services;
 

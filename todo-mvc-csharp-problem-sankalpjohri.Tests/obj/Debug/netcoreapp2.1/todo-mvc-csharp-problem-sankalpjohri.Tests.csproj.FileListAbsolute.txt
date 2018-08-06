@@ -6,12 +6,12 @@ D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankal
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.runtimeconfig.dev.json
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.dll
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.pdb
+D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.dll
+D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.pdb
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.csprojAssemblyReference.cache
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.CoreCompileInputs.cache
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.AssemblyInfoInputs.cache
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.AssemblyInfo.cs
+D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.CopyComplete
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.dll
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.pdb
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.dll
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.pdb
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri.Tests\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.Tests.csproj.CopyComplete

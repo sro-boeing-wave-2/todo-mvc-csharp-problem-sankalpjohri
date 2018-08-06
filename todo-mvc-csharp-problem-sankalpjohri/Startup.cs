@@ -4,9 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 using Swashbuckle.AspNetCore.Swagger;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using Swashbuckle.AspNetCore.SwaggerUI;
+
+
 using todo;
 using todo_mvc_csharp_problem_sankalpjohri.Connectors;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
@@ -27,7 +28,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+      services.AddMvcCore().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
       services.AddScoped<INoteService, NoteService>();
       services.AddScoped<INoteAccess<Note, long>, NoteAccess>();
       services.AddScoped<ILabelService, LabelService>();
@@ -36,7 +37,6 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       services.AddScoped<ICheckListAccess<ChecklistItem, long>, CheckListItemAccess>();
       services.AddDbContext<NotesContext>(opts =>
         opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
-
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new Info { Title = "Todo API\'s", Version = "v1" });
