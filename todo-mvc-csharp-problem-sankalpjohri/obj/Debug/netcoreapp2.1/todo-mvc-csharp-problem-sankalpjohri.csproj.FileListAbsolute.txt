@@ -12,17 +12,3 @@ D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-m
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.pdb
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.dll
 D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.pdb
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.deps.json
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.runtimeconfig.json
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.runtimeconfig.dev.json
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.dll
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\bin\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.pdb
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.csprojAssemblyReference.cache
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.csproj.CoreCompileInputs.cache
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.RazorAssemblyInfo.cache
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.RazorAssemblyInfo.cs
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.AssemblyInfoInputs.cache
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.AssemblyInfo.cs
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.RazorTargetAssemblyInfo.cache
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.dll
-D:\Workspace\todo-mvc-csharp-problem-sankalpjohri\todo-mvc-csharp-problem-sankalpjohri\obj\Debug\netcoreapp2.1\todo-mvc-csharp-problem-sankalpjohri.pdb
