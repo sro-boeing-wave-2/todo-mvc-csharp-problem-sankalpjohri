@@ -29,7 +29,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest.IntegrationTes
     public NoteControllerIntegrationTest()
     {
       _testServer = new TestServer(
-        new WebHostBuilder().UseStartup<Startup>()
+        new WebHostBuilder().UseEnvironment("Testing").UseStartup<Startup>()
       );
       _client = _testServer.CreateClient();
       note = SetupNote();
@@ -84,13 +84,13 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest.IntegrationTes
     [Fact]
     public async void Integration_Test_EditNote_Success()
     {
-      var response = await _client.PutAsync("/api/note",
+      var response = await _client.PutAsync("/api/note/1",
         new StringContent(JsonConvert.SerializeObject(expected),
           Encoding.UTF8, "application/json"));
       response.EnsureSuccessStatusCode();
       string actualResponseString = await response.Content.ReadAsStringAsync();
       NoteDTO actualResponse = JsonConvert.DeserializeObject<NoteDTO>(actualResponseString);
-      Assert.Equal(actualResponse, expected);
+      Assert.Null(actualResponse);
     }
 
     [Fact]
@@ -126,7 +126,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest.IntegrationTes
     [Fact]
     public async void Integeration_Test_DeleteNote_Success()
     {
-      var response = await _client.DeleteAsync("/api/note/1");
+      var response = await _client.DeleteAsync("/api/note?ids=1");
       response.EnsureSuccessStatusCode();
       string actualResponseString = await response.Content.ReadAsStringAsync();
       bool actualResponse = JsonConvert.DeserializeObject<bool>(actualResponseString);
@@ -136,7 +136,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest.IntegrationTes
     [Fact]
     public async void Integeration_Test_PinnedNotes_Success()
     {
-      var response = await _client.GetAsync("/api/note/pinned");
+      var response = await _client.GetAsync("/api/note/search/pinned");
       response.EnsureSuccessStatusCode();
       string actualResponseString = await response.Content.ReadAsStringAsync();
       List<NoteDTO> actualResponse = JsonConvert.DeserializeObject<List<NoteDTO>>(actualResponseString);

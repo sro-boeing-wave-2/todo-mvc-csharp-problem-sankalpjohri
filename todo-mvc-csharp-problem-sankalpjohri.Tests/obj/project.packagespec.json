@@ -30,15 +30,23 @@
   "frameworks": {
     "netcoreapp2.1": {
       "dependencies": {
-        "EntityFramework": {
+        "Microsoft.AspNetCore.Mvc.Core": {
           "target": "Package",
-          "version": "[6.2.0, )"
+          "version": "[2.1.1, )"
         },
-        "Microsoft.AspNet.Mvc": {
+        "Microsoft.AspNetCore.Razor": {
           "target": "Package",
-          "version": "[5.2.6, )"
+          "version": "[2.1.1, )"
+        },
+        "Microsoft.AspNetCore.Razor.Runtime": {
+          "target": "Package",
+          "version": "[2.1.1, )"
         },
         "Microsoft.AspNetCore.TestHost": {
+          "target": "Package",
+          "version": "[2.1.1, )"
+        },
+        "Microsoft.EntityFrameworkCore": {
           "target": "Package",
           "version": "[2.1.1, )"
         },
@@ -59,6 +67,10 @@
         "Microsoft.TestPlatform.TestHost": {
           "target": "Package",
           "version": "[15.8.0, )"
+        },
+        "Moq": {
+          "target": "Package",
+          "version": "[4.9.0, )"
         },
         "Swashbuckle.AspNetCore": {
           "target": "Package",
