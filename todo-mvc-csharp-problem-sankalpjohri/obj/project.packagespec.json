@@ -26,15 +26,9 @@
   "frameworks": {
     "netcoreapp2.1": {
       "dependencies": {
-        "EntityFramework": {
-          "target": "Package",
-          "version": "[6.2.0, )"
-        },
         "Microsoft.AspNetCore.App": {
-          "suppressParent": "All",
           "target": "Package",
-          "version": "[2.1.1, )",
-          "autoReferenced": true
+          "version": "[2.1.1, )"
         },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
@@ -42,21 +36,9 @@
           "version": "[2.1.0, )",
           "autoReferenced": true
         },
-        "Moq": {
-          "target": "Package",
-          "version": "[4.9.0, )"
-        },
-        "MySql.Data.EntityFrameworkCore": {
-          "target": "Package",
-          "version": "[8.0.12, )"
-        },
         "Newtonsoft.Json": {
           "target": "Package",
           "version": "[11.0.2, )"
-        },
-        "Pomelo.EntityFrameworkCore.Mysql": {
-          "target": "Package",
-          "version": "[2.1.1, )"
         },
         "Swashbuckle.AspNetCore.Swagger": {
           "target": "Package",

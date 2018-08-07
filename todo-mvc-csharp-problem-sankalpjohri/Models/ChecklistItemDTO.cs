@@ -45,5 +45,10 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
       }
       return true;
     }
+    
+    public override int GetHashCode()
+    {
+      return base.GetHashCode();
+    }
   }
 }

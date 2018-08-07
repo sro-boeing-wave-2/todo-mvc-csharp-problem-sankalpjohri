@@ -18,23 +18,35 @@ namespace todo_mvc_csharp_problem_sankalpjohri
 {
   public class Startup
   {
-    public Startup(IConfiguration configuration)
+    public Startup(IConfiguration configuration, IHostingEnvironment _currentEnvironment)
     {
       Configuration = configuration;
+      this._currentEnvironment = _currentEnvironment;
     }
-
+    
     public IConfiguration Configuration { get; }
-
+    public IHostingEnvironment _currentEnvironment { get; }
+    
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddMvcCore().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
       services.AddScoped<INoteService, NoteService>();
       services.AddScoped<INoteAccess<Note, long>, NoteAccess>();
       services.AddScoped<ILabelService, LabelService>();
       services.AddScoped<ILabelAccess<Label, long>, LabelAccess>();
       services.AddScoped<ICheckListItemService, CheckListItemService>();
       services.AddScoped<ICheckListAccess<ChecklistItem, long>, CheckListItemAccess>();
+      if (_currentEnvironment.EnvironmentName.Equals("Testing"))
+      {
+        services.AddDbContext<NotesContext>(opts =>
+          opts.UseInMemoryDatabase());
+      }
+      else
+      {
+        services.AddDbContext<NotesContext>(opts =>
+          opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+      }
       services.AddDbContext<NotesContext>(opts =>
         opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
       services.AddSwaggerGen(c =>
@@ -43,7 +55,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       });
     }
 
-    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    // This method gets called by the runtime. Use this method to configure the HTTP request ipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
       if (env.IsDevelopment())
@@ -58,7 +70,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       app.UseSwagger();
       
       app.UseSwaggerUI(c =>
-      {
+      { 
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API\'s v1");
       });
       

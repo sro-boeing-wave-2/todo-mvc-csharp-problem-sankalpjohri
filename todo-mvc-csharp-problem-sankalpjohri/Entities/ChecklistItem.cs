@@ -41,5 +41,10 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Entities
       
       return true;
     }
+
+    public override int GetHashCode()
+    {
+      return base.GetHashCode();
+    }
   }
 }

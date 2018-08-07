@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity.Core;
 using System.Linq;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
@@ -46,9 +45,8 @@ namespace todo
       Note note = _noteAccess.GetNoteById(id);
       if (note == null)
       {
-        throw new ObjectNotFoundException();
+        return null;
       }
-
       NoteDTO result = new NoteDTO(note);
       result.checklist = _checkListItemService.FindByNoteId(id);
       result.labels = _labelService.FindByNoteId(id);
@@ -76,8 +74,15 @@ namespace todo
       foreach (long noteId in noteIds)
       {
         NoteDTO noteDto = GetNote(noteId);
-        _labelService.DeleteLabelsForNote(noteId, noteDto.labels);
-        _checkListItemService.DeleteCheckListItemsForNote(noteId, noteDto.checklist);
+        if (noteDto != null)
+        {
+          _labelService.DeleteLabelsForNote(noteId, noteDto.labels);
+          _checkListItemService.DeleteCheckListItemsForNote(noteId, noteDto.checklist);
+        }
+        else
+        {
+          return false;
+        }
       }
 
       return true;
@@ -85,6 +90,7 @@ namespace todo
 
     public NoteDTO EditNote(long id, NoteDTO note)
     {
+      
       _noteAccess.UpdateNote(note.toEntity());
       _labelService.UpdateLabelsForNote(id, note.labels);
       _checkListItemService.UpdateCheckListItemsForNote(id, note.checklist);
