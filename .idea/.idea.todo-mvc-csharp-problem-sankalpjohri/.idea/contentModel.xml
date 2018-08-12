@@ -14,6 +14,7 @@
         <e p="Bin" t="ExcludeRecursive" />
         <e p="Connectors" t="Include">
           <e p="NotesContext.cs" t="Include" />
+          <e p="NotesContextMongo.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">
           <e p="NotesController.cs" t="Include" />
@@ -26,6 +27,8 @@
         <e p="Migrations" t="Include">
           <e p="20180802071359_InitialMigrations.cs" t="Include" />
           <e p="20180802071359_InitialMigrations.Designer.cs" t="Include" />
+          <e p="20180808061739_initial.cs" t="Include" />
+          <e p="20180808061739_initial.Designer.cs" t="Include" />
           <e p="NotesContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -54,6 +57,9 @@
             <e p="NoteAccess.cs" t="Include" />
           </e>
           <e p="INoteAccess.cs" t="Include" />
+          <e p="MongoRepositories" t="Include">
+            <e p="NoteAccessMongo.cs" t="Include" />
+          </e>
         </e>
         <e p="Services" t="Include">
           <e p="ICheckListItemService.cs" t="Include" />

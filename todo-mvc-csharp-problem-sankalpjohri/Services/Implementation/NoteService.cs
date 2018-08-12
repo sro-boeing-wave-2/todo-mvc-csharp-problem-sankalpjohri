@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using MongoDB.Bson;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Repositories;
@@ -10,11 +11,11 @@ namespace todo
 {
   public class NoteService : INoteService
   {
-    private INoteAccess<Note, long> _noteAccess;
+    private INoteAccess<Note, ObjectId> _noteAccess;
     private ILabelService _labelService;
     private ICheckListItemService _checkListItemService;
 
-    public NoteService(INoteAccess<Note, long> _noteAccess, ILabelService _labelService,
+    public NoteService(INoteAccess<Note, ObjectId> _noteAccess, ILabelService _labelService,
       ICheckListItemService _checkListItemService)
     {
       this._noteAccess = _noteAccess;

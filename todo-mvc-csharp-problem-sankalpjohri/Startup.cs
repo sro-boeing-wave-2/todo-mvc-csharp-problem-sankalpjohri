@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using MongoDB.Bson;
 using Swashbuckle.AspNetCore.Swagger;
 
 
@@ -12,6 +12,7 @@ using todo;
 using todo_mvc_csharp_problem_sankalpjohri.Connectors;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Repositories;
+using todo_mvc_csharp_problem_sankalpjohri.Repositories.MongoRepositories;
 using todo_mvc_csharp_problem_sankalpjohri.Services;
 
 namespace todo_mvc_csharp_problem_sankalpjohri
@@ -32,6 +33,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri
     {
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
       services.AddScoped<INoteService, NoteService>();
+      services.AddScoped<INoteAccess<Note, ObjectId>, NoteAccessMongo>();      
       services.AddScoped<INoteAccess<Note, long>, NoteAccess>();
       services.AddScoped<ILabelService, LabelService>();
       services.AddScoped<ILabelAccess<Label, long>, LabelAccess>();
@@ -40,15 +42,9 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       if (_currentEnvironment.EnvironmentName.Equals("Testing"))
       {
         services.AddDbContext<NotesContext>(opts =>
-          opts.UseInMemoryDatabase());
+          opts.UseInMemoryDatabase("TestDB"));
       }
-      else
-      {
-        services.AddDbContext<NotesContext>(opts =>
-          opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
-      }
-      services.AddDbContext<NotesContext>(opts =>
-        opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+      
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new Info { Title = "Todo API\'s", Version = "v1" });

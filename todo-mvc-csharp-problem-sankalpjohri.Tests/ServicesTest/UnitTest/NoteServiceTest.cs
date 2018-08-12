@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MongoDB.Bson;
 using Moq;
 using todo;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
@@ -55,7 +56,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     public void Test_CreateNote_Success()
     {
       Setup();
-      var noteAccess = new Mock<INoteAccess<Note,long>>();
+      var noteAccess = new Mock<INoteAccess<Note,ObjectId>>();
       var labelService = new Mock<ILabelService>();
       var checkListItemService = new Mock<ICheckListItemService>();
       noteAccess.Setup(_ => _.AddNote(It.IsAny<Note>())).Returns(1L);
@@ -72,7 +73,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     public void Test_GetNote_Success()
     {
       Setup();
-      var noteAccess = new Mock<INoteAccess<Note,long>>();
+      var noteAccess = new Mock<INoteAccess<Note,ObjectId>>();
       var labelService = new Mock<ILabelService>();
       var checkListItemService = new Mock<ICheckListItemService>();
       noteAccess.Setup(_ => _.GetNoteById(It.IsAny<long>())).Returns(note);
@@ -88,7 +89,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     public void Test_GetAllNotes_Success()
     {
       Setup();
-      var noteAccess = new Mock<INoteAccess<Note,long>>();
+      var noteAccess = new Mock<INoteAccess<Note,ObjectId>>();
       var labelService = new Mock<ILabelService>();
       var checkListItemService = new Mock<ICheckListItemService>();
       noteAccess.Setup(_ => _.GetAllNotes()).Returns(new List<Note>() {note});
@@ -107,7 +108,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     public void Test_DeleteNote_Success()
     {
       Setup();
-      var noteAccess = new Mock<INoteAccess<Note,long>>();
+      var noteAccess = new Mock<INoteAccess<Note,ObjectId>>();
       var labelService = new Mock<ILabelService>();
       var checkListItemService = new Mock<ICheckListItemService>();
       noteAccess.Setup(_ => _.GetNoteById(It.IsAny<long>())).Returns(note);
@@ -122,7 +123,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     public void Test_EditNote_Success()
     {
       Setup();
-      var noteAccess = new Mock<INoteAccess<Note,long>>();
+      var noteAccess = new Mock<INoteAccess<Note,ObjectId>>();
       var labelService = new Mock<ILabelService>();
       var checkListItemService = new Mock<ICheckListItemService>();
       noteAccess.Setup(_ => _.GetNoteById(It.IsAny<long>())).Returns(note);
@@ -138,7 +139,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     public void Test_GetPinnnedNotes_Success()
     {
       Setup();
-      var noteAccess = new Mock<INoteAccess<Note,long>>();
+      var noteAccess = new Mock<INoteAccess<Note,ObjectId>>();
       var labelService = new Mock<ILabelService>();
       var checkListItemService = new Mock<ICheckListItemService>();
       noteAccess.Setup(_ => _.GetPinnedNotes()).Returns(new List<Note>() {note});
@@ -157,7 +158,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest
     public void Test_GetNotesByTitle_Success()
     {
       Setup();
-      var noteAccess = new Mock<INoteAccess<Note,long>>();
+      var noteAccess = new Mock<INoteAccess<Note, ObjectId>>();
       var labelService = new Mock<ILabelService>();
       var checkListItemService = new Mock<ICheckListItemService>();
       

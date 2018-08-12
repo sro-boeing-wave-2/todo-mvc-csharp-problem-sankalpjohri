@@ -13,17 +13,17 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
     /**
      * Repository method to get a note by id
      */
-    TEntity GetNoteById(long id);
+    TEntity GetNoteById(TU id);
 
     /**
      * Repository method to get notes by ids
      */
-    List<Note> GetNoteById(List<long> ids);
+    List<TEntity> GetNoteById(List<TU> ids);
 
     /**
      * Repository method to add a note to the db
      */
-    long AddNote(TEntity note);
+    TU AddNote(TEntity note);
 
     /**
      * Repository method to update a note.
@@ -33,7 +33,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Repositories
     /**
      * Repository method to delete notes by ids
      */
-    int DeleteNotes(List<long> id);
+    int DeleteNotes(List<TU> id);
 
     /**
     * Repository method to search notes by title.
