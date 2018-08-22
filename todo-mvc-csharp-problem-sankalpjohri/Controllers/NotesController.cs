@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
 using todo_mvc_csharp_problem_sankalpjohri.Services;
 
@@ -54,9 +55,9 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
      */
     [Route("{id}")]
     [HttpGet]
-    public IActionResult GetNoteById(long id)
+    public IActionResult GetNoteById(string id)
     {
-      NoteDTO result = _noteService.GetNote(id);
+      NoteDTO result = _noteService.GetNote(ObjectId.Parse(id));
       return Ok(result);
     }
     
@@ -74,9 +75,14 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
      * Delete a/set of note/s.
      */
     [HttpDelete]
-    public IActionResult DeleteNote([FromQuery(Name = "ids")] List<long> ids)
+    public IActionResult DeleteNote([FromQuery(Name = "ids")] List<string> ids)
     {
-      bool result = _noteService.DeleteNotes(ids);
+      List<ObjectId> objectIds = new List<ObjectId>();
+      foreach (string id in ids)
+      {
+        objectIds.Add(ObjectId.Parse(id));
+      }
+      bool result = _noteService.DeleteNotes(objectIds);
       return Ok(result);
     }
     
@@ -85,9 +91,9 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Controllers
      */
     [Route("{id}")]
     [HttpPut]
-    public IActionResult EditNote(long id, [FromBody] NoteDTO note)
+    public IActionResult EditNote(string id, [FromBody] NoteDTO note)
     {
-      NoteDTO result = _noteService.EditNote(id, note);
+      NoteDTO result = _noteService.EditNote(ObjectId.Parse(id), note);
       return Ok(result);
     }
     

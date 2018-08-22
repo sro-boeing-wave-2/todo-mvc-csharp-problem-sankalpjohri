@@ -4,7 +4,6 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
 {
   public class ChecklistItemDTO
   {
-    public long id { get; set; }
     public string text { get; set; }
     public bool isChecked { get; set; }
 
@@ -13,23 +12,21 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
     {
     }
 
-    public ChecklistItemDTO(long id, string text, bool isChecked)
+    public ChecklistItemDTO(string text, bool isChecked)
     {
-      this.id = id;
       this.text = text;
       this.isChecked = isChecked;
     }
 
     public ChecklistItemDTO(ChecklistItem checklistItem)
     {
-      id = checklistItem.id;
       text = checklistItem.text;
       isChecked = checklistItem.isChecked;
     }
 
-    public ChecklistItem toEntity(long noteId)
+    public ChecklistItem toEntity()
     {
-      return new ChecklistItem(id, text, isChecked, noteId);
+      return new ChecklistItem(text, isChecked);
     }
 
     public override bool Equals(object obj)
@@ -39,7 +36,12 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
         return false;
       }
 
-      if (((ChecklistItemDTO) obj).id == null || ((ChecklistItemDTO) obj).id != id)
+      if (((ChecklistItemDTO) obj).text == null || !((ChecklistItemDTO) obj).text.Equals(text))
+      {
+        return false;
+      }
+      
+      if (((ChecklistItemDTO) obj).isChecked == null || !((ChecklistItemDTO) obj).isChecked.Equals(isChecked))
       {
         return false;
       }

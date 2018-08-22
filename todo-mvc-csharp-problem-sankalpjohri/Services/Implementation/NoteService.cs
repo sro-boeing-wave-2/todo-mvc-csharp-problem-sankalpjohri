@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using MongoDB.Bson;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
@@ -12,45 +11,30 @@ namespace todo
   public class NoteService : INoteService
   {
     private INoteAccess<Note, ObjectId> _noteAccess;
-    private ILabelService _labelService;
-    private ICheckListItemService _checkListItemService;
 
-    public NoteService(INoteAccess<Note, ObjectId> _noteAccess, ILabelService _labelService,
-      ICheckListItemService _checkListItemService)
+    public NoteService(INoteAccess<Note, ObjectId> _noteAccess)
     {
       this._noteAccess = _noteAccess;
-      this._labelService = _labelService;
-      this._checkListItemService = _checkListItemService;
     }
 
     public NoteDTO CreateNote(NoteDTO note)
     {
       Note noteEntity = note.toEntity();
-      long noteId = _noteAccess.AddNote(noteEntity);
-      if (noteId <= 0)
-      {
-        throw new DataException();
-      }
-
+      ObjectId noteId = _noteAccess.AddNote(noteEntity);
       noteEntity = _noteAccess.GetNoteById(noteId);
-      List<LabelDTO> labels = _labelService.AddLabelsForNote(noteId, note.labels);
-      List<ChecklistItemDTO> checklistItems = _checkListItemService.AddCheckListItemsForNote(noteId, note.checklist);
       NoteDTO result = new NoteDTO(noteEntity);
-      result.labels = labels;
-      result.checklist = checklistItems;
       return result;
     }
 
-    public NoteDTO GetNote(long id)
+    public NoteDTO GetNote(ObjectId id)
     {
       Note note = _noteAccess.GetNoteById(id);
       if (note == null)
       {
         return null;
       }
+
       NoteDTO result = new NoteDTO(note);
-      result.checklist = _checkListItemService.FindByNoteId(id);
-      result.labels = _labelService.FindByNoteId(id);
       return result;
     }
 
@@ -62,56 +46,28 @@ namespace todo
       {
         foreach (Note note in noteList)
         {
-          resultList.Add(GetNote(note.id));
+          resultList.Add(new NoteDTO(note));
         }
       }
 
       return resultList;
     }
 
-    public bool DeleteNotes(List<long> noteIds)
+    public bool DeleteNotes(List<ObjectId> noteIds)
     {
       _noteAccess.DeleteNotes(noteIds);
-      foreach (long noteId in noteIds)
-      {
-        NoteDTO noteDto = GetNote(noteId);
-        if (noteDto != null)
-        {
-          _labelService.DeleteLabelsForNote(noteId, noteDto.labels);
-          _checkListItemService.DeleteCheckListItemsForNote(noteId, noteDto.checklist);
-        }
-        else
-        {
-          return false;
-        }
-      }
-
       return true;
     }
 
-    public NoteDTO EditNote(long id, NoteDTO note)
+    public NoteDTO EditNote(ObjectId id, NoteDTO note)
     {
-      
       _noteAccess.UpdateNote(note.toEntity());
-      _labelService.UpdateLabelsForNote(id, note.labels);
-      _checkListItemService.UpdateCheckListItemsForNote(id, note.checklist);
       return GetNote(id);
     }
 
     public List<NoteDTO> GetNotesByLabel(List<string> labels)
     {
       List<NoteDTO> resultLists = new List<NoteDTO>();
-      List<Label> searchResults = _labelService.SearchLabelByText(labels);
-      List<long> noteIds = searchResults.Select(label => label.noteId).Distinct().ToList();
-      List<Note> notes = _noteAccess.GetNoteById(noteIds);
-      if (noteIds != null && noteIds.Count > 0)
-      {
-        foreach (Note note in notes)
-        {
-          resultLists.Add(GetNote(note.id));
-        }
-      }
-
       return resultLists;
     }
 
@@ -123,7 +79,7 @@ namespace todo
       {
         foreach (Note note in notes)
         {
-          resultLists.Add(GetNote(note.id));
+          resultLists.Add(new NoteDTO(note));
         }
       }
 
@@ -138,9 +94,10 @@ namespace todo
       {
         foreach (Note note in notes)
         {
-          resultLists.Add(GetNote(note.id));
+          resultLists.Add(new NoteDTO(note));
         }
       }
+
       return resultLists;
     }
   }

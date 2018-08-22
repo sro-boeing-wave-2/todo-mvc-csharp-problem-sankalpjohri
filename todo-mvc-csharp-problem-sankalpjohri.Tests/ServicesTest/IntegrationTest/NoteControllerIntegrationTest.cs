@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Text;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using MongoDB.Bson;
 using Newtonsoft.Json;
 using todo_mvc_csharp_problem_sankalpjohri.Entities;
 using todo_mvc_csharp_problem_sankalpjohri.Models;
@@ -40,7 +41,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest.IntegrationTes
     private NoteDTO SetupNoteDTO()
     {
       NoteDTO noteDto = new NoteDTO();
-      noteDto.id = 1L;
+      noteDto.id = ObjectId.GenerateNewId().ToString();
       noteDto.text = "Test Text";
       noteDto.title = "Test Title";
       noteDto.isPinned = true;
@@ -52,7 +53,7 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Tests.ServicesTest.IntegrationTes
     private Note SetupNote()
     {
       Note note = new Note();
-      note.id = 1L;
+      note.id = ObjectId.GenerateNewId();
       note.title = "Title";
       note.text = "Test Text";
       note.isPinned = true;

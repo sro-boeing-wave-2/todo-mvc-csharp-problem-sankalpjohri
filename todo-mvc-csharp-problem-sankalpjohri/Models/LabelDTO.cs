@@ -4,28 +4,25 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
 {
   public class LabelDTO
   {
-    public long id { get; set; }
     public string text { get; set; }
 
     public LabelDTO()
     {
     }
 
-    public LabelDTO(long id, string text)
+    public LabelDTO(string text)
     {
-      this.id = id;
       this.text = text;
     }
 
     public LabelDTO(Label label)
     {
-      id = label.id;
       text = label.text;
     }
 
-    public Label toEntity(long noteId)
+    public Label toEntity()
     {
-      return new Label(id, text, noteId);
+      return new Label(text);
     }
 
     public override bool Equals(object obj)
@@ -35,10 +32,11 @@ namespace todo_mvc_csharp_problem_sankalpjohri.Models
         return false;
       }
 
-      if (((LabelDTO) obj).id == null || ((LabelDTO) obj).id != id)
+      if (((LabelDTO) obj).text == null || !((LabelDTO) obj).text.Equals(text))
       {
         return false;
       }
+      
       return true;
     }
     

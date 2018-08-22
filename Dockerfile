@@ -4,5 +4,6 @@ WORKDIR /app
 RUN ["dotnet", "restore"]
 RUN ["dotnet", "build"]
 EXPOSE 5000
-RUN chmod +x docker_entrypoint.sh
-CMD /bin/bash docker_entrypoint.sh
+WORKDIR todo-mvc-csharp-problem-sankalpjohri
+RUN ls
+ENTRYPOINT dotnet run

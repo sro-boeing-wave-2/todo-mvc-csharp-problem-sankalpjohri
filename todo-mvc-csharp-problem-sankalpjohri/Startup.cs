@@ -33,22 +33,16 @@ namespace todo_mvc_csharp_problem_sankalpjohri
     {
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
       services.AddScoped<INoteService, NoteService>();
-      services.AddScoped<INoteAccess<Note, ObjectId>, NoteAccessMongo>();      
-      services.AddScoped<INoteAccess<Note, long>, NoteAccess>();
-      services.AddScoped<ILabelService, LabelService>();
-      services.AddScoped<ILabelAccess<Label, long>, LabelAccess>();
-      services.AddScoped<ICheckListItemService, CheckListItemService>();
-      services.AddScoped<ICheckListAccess<ChecklistItem, long>, CheckListItemAccess>();
-      if (_currentEnvironment.EnvironmentName.Equals("Testing"))
-      {
-        services.AddDbContext<NotesContext>(opts =>
-          opts.UseInMemoryDatabase("TestDB"));
-      }
+      services.AddScoped<INoteAccess<Note, ObjectId>, NoteAccessMongo>();
       
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new Info { Title = "Todo API\'s", Version = "v1" });
       });
+      services.AddCors(
+        options => options.AddPolicy("allowaccess",
+          builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+        ));
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request ipeline.
@@ -69,6 +63,8 @@ namespace todo_mvc_csharp_problem_sankalpjohri
       { 
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API\'s v1");
       });
+      
+      app.UseCors("allowaccess");  
       
       app.UseMvc();
     }
